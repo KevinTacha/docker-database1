@@ -1,0 +1,23 @@
+services:
+    postgres:
+    image: postgres:16
+    container_name: pg-container
+    enviroment:
+        POSTGRES_USER: tacha_admin
+        POSTGRES_PASWWORD: 1912
+        POSTGRES_DB: tacha_db
+    ports:
+        - "5432:5432"        
+    cloudbeaver:  
+        image: dbeaver/cloudbeaver:latest  
+        ports:
+            - "8888:8978"
+        restart: unless-stopped    
+    redis: 
+        image: redis:latest
+        ports:
+            - "6379:6379"
+        restart: unless-stopped
+        enviroment:
+            - REDIS_PASSWORD=123456
+            - REDIS_USER = tacha        
