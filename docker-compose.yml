@@ -1,13 +1,13 @@
 services:
     postgres:
-    image: postgres:16
-    container_name: pg-container
-    enviroment:
-        POSTGRES_USER: tacha_admin
-        POSTGRES_PASWWORD: 1912
-        POSTGRES_DB: tacha_db
-    ports:
-        - "5432:5432"        
+        image: postgres:16
+        container_name: pg-container
+        environment:
+            POSTGRES_USER: tacha_admin
+            POSTGRES_PASWWORD: 1912
+            POSTGRES_DB: tacha_db
+        ports:
+            - "5432:5432"        
     cloudbeaver:  
         image: dbeaver/cloudbeaver:latest  
         ports:
