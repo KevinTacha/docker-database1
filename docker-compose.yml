@@ -7,7 +7,7 @@ services:
             POSTGRES_PASWWORD: 1912
             POSTGRES_DB: tacha_db
         ports:
-            - "5432:5432"        
+            - "55432:5432"        
     cloudbeaver:  
         image: dbeaver/cloudbeaver:latest  
         ports:
@@ -19,5 +19,5 @@ services:
             - "6379:6379"
         restart: unless-stopped
         enviroment:
-            - REDIS_PASSWORD=123456
+            - REDIS_PASSWORD=1912
             - REDIS_USER = tacha        
